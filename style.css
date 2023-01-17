@@ -1,9 +1,6 @@
 /*GENERAL*/
 :root {
-    --main-color: #E44444; /* var(--main-color) */
-    --second-color: #CD487B; /* var(--second-color) */
-    --light-grey-color: #EDEDED; /* var(--light-grey-color) */
-    --drak-grey-color: #4B4B4B; /* var(--drak-grey-color) */
+    
   }
   
   * {
@@ -21,7 +18,7 @@
   }
   
   .container {
-    max-width: 1440px;
+    max-width: 1400px;
   }
 
   
