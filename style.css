@@ -1,10 +1,14 @@
 /*GENERAL*/
 :root {
-    
+    --main-color: #E44444; /* var(--main-color) */
+    --second-color: #CD487B; /* var(--second-color) */
+    --light-grey-color: #EDEDED; /* var(--light-grey-color) */
+    --drak-grey-color: #4B4B4B; /* var(--drak-grey-color) */
   }
   
   * {
     margin: 0;
+   
   }
   
   body {
@@ -12,26 +16,22 @@
       font-family: 'Raleway', sans-serif;
       font-style: normal;
       font-size: 1em;
-  }
-  main{
-    padding: 20px 50px;
+      padding: 20px 50px;
   }
   
-  .container {
+  .conteneur_body {
     max-width: 1400px;
   }
 
   
   /*HEADER*/
-  header {
-    background-color: white;
-    padding: 20px 50px;
-  }
   .en_tete {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    padding: 20px 50px;
    }
 
   .menu_liste{
@@ -41,85 +41,161 @@
     justify-content: space-between;
     gap: 15px;
   }
-  header ul{
+
+  .en_tete ul.menu_liste{
         list-style-type: none; 
   }
-  header a{
+
+  .en_tete a{
     text-decoration: none;
     color: black;
   }
-  header a:hover{
+
+  .en_tete a:hover{
     text-decoration: none;
     color:blue;
     border-top: solid blue;
   }
-  header img{
+
+  .en_tete img{
     width: 61px;
     height: 19px;
   }
+
   a{
     padding-top: 10px
   }
 
   /*content*/
   h1{
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
+
   h2{
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
+
   h3{
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
+
+  body i{
+    color:blue;
+  }
+
+  .filtres_section{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-top:30px;
+  }
+
+  .formulaire{
+    display: flex;
+    flex-direction: row;
+    gap:0px
+  }
+
+  .btn_rechercher{
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 1.1em;
+    padding:10px;
+  }
+
+  #recherche{
+    font-weight: bold ;
+    font-size: 1.1em;
+    border-top:solid 1px;
+    border-bottom:solid 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #d9d9d9;
+    padding:10px;
+  }
+
+  .btn_rechercher:hover{
+    cursor: pointer;
+  }
+
+  label i{
+    color:black;
+    border-radius:10px 0px 0px 10px;
+    background-color:#d9d9d9;
+    padding:14px;
+  }
+  .fct_filtres{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap:20px;
+  }
+ 
+  .fct_filtres .btn_filtre {
+    border: solid;
+    border-radius: 20px;
+    border-color: #d9d9d9;
+    padding:10px 10px;
+  }
+
+  .fct_filtres p{
+    font-weight: bold;
+  }
+
+  .btn_filtre:hover{
+    background-color: #DEEBFF;
+    cursor:pointer
+  }
+
   .symbol_info{
     border: solid #d9d9d9;
-    border-radius: 100px;
-    padding-left: 6px;
-    padding-right: 6px;
+    border-radius: 50px;
+    padding:2px 8px;
   }
 
   .section_contenu{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #CD487B;
+    height:auto;
     margin-top: 30px;
+    gap:40px
   }
   
   .conteneur_cartes_1{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #d9d9d9;
     border-radius: 20px;
-    width:60%;
-    height: 620px;
-    padding: 10px 40px;
+    width:70%;
+    padding: 40px 40px;
   }
 
   .conteneur_cartes_2{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: #d9d9d9;
     border-radius: 20px;
-    width: 25%;
-    height: 620px;
-    padding: 10px 20px;
+    width: 30%;
+    padding: 40px 40px;
   }
+
   .titre_conteneur_cartes_2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
 
   }
   .conteneur_mini{
     display: flex;
     flex-direction: row;
-    background-color: #b8e70e;
     justify-content: space-between;
     width: 100%;
-    height:35%;
+    height:200px;
+    margin-top: 40px;/*30 +10 pour les bourdures de 5px*/
+    margin-bottom: 10px;
   }
 
   .carte_clic{
@@ -130,9 +206,19 @@
     height:100%;
     border-radius: 20px;
     padding-top: 0px;
-   border: solid white 5px;
+    border: solid white 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color:black;
+    text-decoration: none;
   }
+
+  .carte_bas{
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+  .carte_bas p{
+    margin-top:5px;
+    }
 
   .carte_clic:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -145,20 +231,27 @@
     border-radius: 20px 20px 0px 0px;
   }
 
-  .carte_bas{
-    padding: 10px 15px;
+  .affich_plus{
+    margin-top: 50px;
+    text-decoration: none;
+    color:black;
+    font-size: 1.1em;
+    font-weight: bold;
   }
-
+  
   .carte_clic_pop{
     display: flex;
     flex-direction: row;
     background-color: white;
-    width: 90%;
-    height: 23%;
+    width: calc(100% - 10px);
+    height: 145px;
     border-radius: 20px;
     padding-top: 0px;
+    margin-top: 40px;
     border: solid white 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color:black;
+    text-decoration: none;
   }
 
   .carte_clic_pop:hover{
@@ -171,5 +264,78 @@
     object-fit:cover;
     border-radius: 20px 0px 0px 20px;
   }
-  
 
+  .carte_cote{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    font-size: 0.9em;
+  }
+  
+  .contenu_activ{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .conteneur_carte_activ{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  .carte_clic_activ{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 450px;
+    width: 23%;
+    border-radius: 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding-top: 0px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .carte_clic_activ:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .image_carte_activ{  
+    width: 100%;
+    height: 80%;
+    object-fit:cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .article_activ{
+    height:100%;
+    width:100%;
+  }
+
+  .carte_bas_activ{
+    margin-top: 30px;
+    padding-left: 20px;
+  }
+
+  /*footer*/
+
+  .pied_page{
+    display: flex;
+    flex-direction: row;
+    gap:250px;
+    background-color: #d9d9d9;
+    margin-top:30px;
+    padding-left:100px;
+  }
+
+  .pied_page p{
+    margin-top: 10px;
+  }
+  
+  .pied_page_info{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
